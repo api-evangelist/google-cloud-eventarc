@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcp": "https://cloud.google.com/eventarc/docs/reference/rest/v1/",
+    "Trigger": "gcp:projects.locations.triggers",
+    "Channel": "gcp:projects.locations.channels",
+    "Provider": "gcp:projects.locations.providers",
+    "name": "schema:name",
+    "description": "schema:description",
+    "state": "schema:status",
+    "createTime": "schema:dateCreated",
+    "updateTime": "schema:dateModified",
+    "serviceAccount": "schema:identifier",
+    "eventFilters": {
+      "@id": "gcp:EventFilter",
+      "@type": "@id"
+    },
+    "destination": {
+      "@id": "gcp:Destination",
+      "@type": "@id"
+    },
+    "transport": {
+      "@id": "gcp:Transport",
+      "@type": "@id"
+    }
+  }
+}

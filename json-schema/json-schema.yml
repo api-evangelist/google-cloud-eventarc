@@ -1,0 +1,117 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/api-evangelist/google-cloud-eventarc/refs/heads/main/json-schema/json-schema.yml
+title: Google Cloud Eventarc Schema
+description: JSON Schema for Google Cloud Eventarc API resources.
+type: object
+$defs:
+  Trigger:
+    type: object
+    title: Trigger
+    description: An Eventarc trigger that routes events to a destination.
+    properties:
+      name:
+        type: string
+        description: >-
+          The trigger name in the format
+          projects/{project}/locations/{location}/triggers/{trigger}.
+      eventFilters:
+        type: array
+        description: Event matching criteria for the trigger.
+        items:
+          $ref: '#/$defs/EventFilter'
+      serviceAccount:
+        type: string
+        description: The IAM service account used by the trigger.
+      destination:
+        $ref: '#/$defs/Destination'
+      channel:
+        type: string
+        description: The channel associated with the trigger.
+      createTime:
+        type: string
+        format: date-time
+        description: The time when the trigger was created.
+      updateTime:
+        type: string
+        format: date-time
+        description: The time when the trigger was last updated.
+    required:
+      - name
+      - eventFilters
+      - destination
+  EventFilter:
+    type: object
+    title: Event Filter
+    description: A filter that matches events based on attributes.
+    properties:
+      attribute:
+        type: string
+        description: The name of the event attribute to filter on.
+      value:
+        type: string
+        description: The value to match for the attribute.
+      operator:
+        type: string
+        description: The operator used for matching.
+    required:
+      - attribute
+      - value
+  Destination:
+    type: object
+    title: Destination
+    description: The destination for routed events.
+    properties:
+      cloudRun:
+        $ref: '#/$defs/CloudRun'
+      cloudFunction:
+        type: string
+        description: The Cloud Function resource name.
+      workflow:
+        type: string
+        description: The Workflows resource name.
+  CloudRun:
+    type: object
+    title: Cloud Run Destination
+    description: A Cloud Run service destination.
+    properties:
+      service:
+        type: string
+        description: The Cloud Run service name.
+      path:
+        type: string
+        description: The relative URL path on the service.
+      region:
+        type: string
+        description: The region of the Cloud Run service.
+    required:
+      - service
+      - region
+  Channel:
+    type: object
+    title: Channel
+    description: An Eventarc channel for custom event routing.
+    properties:
+      name:
+        type: string
+        description: The channel resource name.
+      provider:
+        type: string
+        description: The event provider for the channel.
+      state:
+        type: string
+        description: The current state of the channel.
+        enum:
+          - STATE_UNSPECIFIED
+          - PENDING
+          - ACTIVE
+          - INACTIVE
+      createTime:
+        type: string
+        format: date-time
+        description: The time when the channel was created.
+      updateTime:
+        type: string
+        format: date-time
+        description: The time when the channel was last updated.
+    required:
+      - name
