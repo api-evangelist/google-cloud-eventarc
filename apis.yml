@@ -1,3 +1,4 @@
+aid: google-cloud-eventarc
 name: Google Cloud Eventarc
 description: >-
   Google Cloud Eventarc is a fully managed eventing service that allows you to
@@ -9,8 +10,9 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-eventarc/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Events
   - Event-Driven
@@ -28,8 +30,14 @@ apis:
     humanURL: https://cloud.google.com/eventarc/docs
     baseURL: https://eventarc.googleapis.com
     properties:
+      - type: Documentation
+        url: https://cloud.google.com/eventarc/docs/reference/rest
       - type: OpenAPI
         url: openapi/openapi.yml
+      - type: Authentication
+        url: https://cloud.google.com/docs/authentication
+      - type: Getting Started
+        url: https://cloud.google.com/eventarc/docs/quickstarts
       - type: JSONSchema
         url: json-schema/json-schema.yml
     tags:
@@ -37,10 +45,24 @@ apis:
       - Triggers
       - Event-Driven Architecture
 common:
-  - type: GettingStarted
+  - type: Portal
+    url: https://cloud.google.com/eventarc
+  - type: Getting Started
     url: https://cloud.google.com/eventarc/docs/quickstarts
+  - type: Documentation
+    url: https://cloud.google.com/eventarc/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
   - type: Pricing
     url: https://cloud.google.com/eventarc/pricing
+  - type: Terms of Service
+    url: https://cloud.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://cloud.google.com/eventarc/docs/support
   - type: JSONLD
     url: json-ld/json-ld.json
 maintainers:
