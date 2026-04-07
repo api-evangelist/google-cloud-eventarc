@@ -15,7 +15,7 @@ paths:
   /v1/projects/{project}/locations/{location}/triggers:
     get:
       operationId: listTriggers
-      summary: List triggers
+      summary: Google Cloud Eventarc List triggers
       description: Lists triggers in a project and location.
       parameters:
         - name: project
@@ -37,7 +37,7 @@ paths:
                 $ref: '#/components/schemas/ListTriggersResponse'
     post:
       operationId: createTrigger
-      summary: Create a trigger
+      summary: Google Cloud Eventarc Create a trigger
       description: Creates a new event trigger.
       parameters:
         - name: project
@@ -70,7 +70,7 @@ paths:
   /v1/projects/{project}/locations/{location}/triggers/{trigger}:
     get:
       operationId: getTrigger
-      summary: Get a trigger
+      summary: Google Cloud Eventarc Get a trigger
       description: Gets an event trigger.
       parameters:
         - name: project
@@ -97,7 +97,7 @@ paths:
                 $ref: '#/components/schemas/Trigger'
     patch:
       operationId: updateTrigger
-      summary: Update a trigger
+      summary: Google Cloud Eventarc Update a trigger
       description: Updates an event trigger.
       parameters:
         - name: project
@@ -130,7 +130,7 @@ paths:
                 $ref: '#/components/schemas/Operation'
     delete:
       operationId: deleteTrigger
-      summary: Delete a trigger
+      summary: Google Cloud Eventarc Delete a trigger
       description: Deletes an event trigger.
       parameters:
         - name: project
@@ -158,7 +158,7 @@ paths:
   /v1/projects/{project}/locations/{location}/channels:
     get:
       operationId: listChannels
-      summary: List channels
+      summary: Google Cloud Eventarc List channels
       description: Lists channels in a project and location.
       parameters:
         - name: project
@@ -180,7 +180,7 @@ paths:
                 $ref: '#/components/schemas/ListChannelsResponse'
     post:
       operationId: createChannel
-      summary: Create a channel
+      summary: Google Cloud Eventarc Create a channel
       description: Creates a new channel for event routing.
       parameters:
         - name: project
@@ -213,7 +213,7 @@ paths:
   /v1/projects/{project}/locations/{location}/channels/{channel}:
     get:
       operationId: getChannel
-      summary: Get a channel
+      summary: Google Cloud Eventarc Get a channel
       description: Gets a channel.
       parameters:
         - name: project
@@ -240,7 +240,7 @@ paths:
                 $ref: '#/components/schemas/Channel'
     delete:
       operationId: deleteChannel
-      summary: Delete a channel
+      summary: Google Cloud Eventarc Delete a channel
       description: Deletes a channel.
       parameters:
         - name: project
@@ -268,7 +268,7 @@ paths:
   /v1/projects/{project}/locations/{location}/providers:
     get:
       operationId: listProviders
-      summary: List providers
+      summary: Google Cloud Eventarc List providers
       description: Lists event providers in a project and location.
       parameters:
         - name: project
