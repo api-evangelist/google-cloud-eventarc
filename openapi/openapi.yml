@@ -35,6 +35,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListTriggersResponse'
+      tags:
+        - Projects
     post:
       operationId: createTrigger
       summary: Google Cloud Eventarc Create a trigger
@@ -67,6 +69,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/{location}/triggers/{trigger}:
     get:
       operationId: getTrigger
@@ -95,6 +99,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Trigger'
+      tags:
+        - Projects
     patch:
       operationId: updateTrigger
       summary: Google Cloud Eventarc Update a trigger
@@ -128,6 +134,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
     delete:
       operationId: deleteTrigger
       summary: Google Cloud Eventarc Delete a trigger
@@ -155,6 +163,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/{location}/channels:
     get:
       operationId: listChannels
@@ -178,6 +188,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListChannelsResponse'
+      tags:
+        - Projects
     post:
       operationId: createChannel
       summary: Google Cloud Eventarc Create a channel
@@ -210,6 +222,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/{location}/channels/{channel}:
     get:
       operationId: getChannel
@@ -238,6 +252,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Channel'
+      tags:
+        - Projects
     delete:
       operationId: deleteChannel
       summary: Google Cloud Eventarc Delete a channel
@@ -265,6 +281,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operation'
+      tags:
+        - Projects
   /v1/projects/{project}/locations/{location}/providers:
     get:
       operationId: listProviders
@@ -288,6 +306,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListProvidersResponse'
+      tags:
+        - Projects
 components:
   schemas:
     Trigger:
@@ -447,3 +467,5 @@ components:
             $ref: '#/components/schemas/Provider'
         nextPageToken:
           type: string
+tags:
+  - name: Projects
