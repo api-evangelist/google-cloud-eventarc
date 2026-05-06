@@ -1,0 +1,630 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Eventarc API
+  description: The Eventarc API enables event-driven architecture by allowing you to create triggers that route events from
+    providers to target destinations such as Cloud Run, Cloud Functions, GKE, and Workflows.
+  tags:
+  - Google
+  - Cloud
+  - Eventarc
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: google-cloud-eventarc
+    baseUri: https://eventarc.googleapis.com
+    description: Google Cloud Eventarc API HTTP API.
+    resources:
+    - name: v1-projects-project-locations-location-triggers
+      path: /v1/projects/{project}/locations/{location}/triggers
+      operations:
+      - name: listtriggers
+        method: GET
+        description: Google Cloud Eventarc List triggers
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createtrigger
+        method: POST
+        description: Google Cloud Eventarc Create a trigger
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: triggerId
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-projects-project-locations-location-triggers-
+      path: /v1/projects/{project}/locations/{location}/triggers/{trigger}
+      operations:
+      - name: gettrigger
+        method: GET
+        description: Google Cloud Eventarc Get a trigger
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: trigger
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updatetrigger
+        method: PATCH
+        description: Google Cloud Eventarc Update a trigger
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: trigger
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletetrigger
+        method: DELETE
+        description: Google Cloud Eventarc Delete a trigger
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: trigger
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-projects-project-locations-location-channels
+      path: /v1/projects/{project}/locations/{location}/channels
+      operations:
+      - name: listchannels
+        method: GET
+        description: Google Cloud Eventarc List channels
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createchannel
+        method: POST
+        description: Google Cloud Eventarc Create a channel
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: channelId
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-projects-project-locations-location-channels-
+      path: /v1/projects/{project}/locations/{location}/channels/{channel}
+      operations:
+      - name: getchannel
+        method: GET
+        description: Google Cloud Eventarc Get a channel
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: channel
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletechannel
+        method: DELETE
+        description: Google Cloud Eventarc Delete a channel
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: channel
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-projects-project-locations-location-providers
+      path: /v1/projects/{project}/locations/{location}/providers
+      operations:
+      - name: listproviders
+        method: GET
+        description: Google Cloud Eventarc List providers
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: google-cloud-eventarc-rest
+    description: REST adapter for Google Cloud Eventarc API.
+    resources:
+    - path: /v1/projects/{project}/locations/{location}/triggers
+      name: listtriggers
+      operations:
+      - method: GET
+        name: listtriggers
+        description: Google Cloud Eventarc List triggers
+        call: google-cloud-eventarc.listtriggers
+        with:
+          project: rest.project
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/triggers
+      name: createtrigger
+      operations:
+      - method: POST
+        name: createtrigger
+        description: Google Cloud Eventarc Create a trigger
+        call: google-cloud-eventarc.createtrigger
+        with:
+          project: rest.project
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/triggers/{trigger}
+      name: gettrigger
+      operations:
+      - method: GET
+        name: gettrigger
+        description: Google Cloud Eventarc Get a trigger
+        call: google-cloud-eventarc.gettrigger
+        with:
+          project: rest.project
+          location: rest.location
+          trigger: rest.trigger
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/triggers/{trigger}
+      name: updatetrigger
+      operations:
+      - method: PATCH
+        name: updatetrigger
+        description: Google Cloud Eventarc Update a trigger
+        call: google-cloud-eventarc.updatetrigger
+        with:
+          project: rest.project
+          location: rest.location
+          trigger: rest.trigger
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/triggers/{trigger}
+      name: deletetrigger
+      operations:
+      - method: DELETE
+        name: deletetrigger
+        description: Google Cloud Eventarc Delete a trigger
+        call: google-cloud-eventarc.deletetrigger
+        with:
+          project: rest.project
+          location: rest.location
+          trigger: rest.trigger
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/channels
+      name: listchannels
+      operations:
+      - method: GET
+        name: listchannels
+        description: Google Cloud Eventarc List channels
+        call: google-cloud-eventarc.listchannels
+        with:
+          project: rest.project
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/channels
+      name: createchannel
+      operations:
+      - method: POST
+        name: createchannel
+        description: Google Cloud Eventarc Create a channel
+        call: google-cloud-eventarc.createchannel
+        with:
+          project: rest.project
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/channels/{channel}
+      name: getchannel
+      operations:
+      - method: GET
+        name: getchannel
+        description: Google Cloud Eventarc Get a channel
+        call: google-cloud-eventarc.getchannel
+        with:
+          project: rest.project
+          location: rest.location
+          channel: rest.channel
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/channels/{channel}
+      name: deletechannel
+      operations:
+      - method: DELETE
+        name: deletechannel
+        description: Google Cloud Eventarc Delete a channel
+        call: google-cloud-eventarc.deletechannel
+        with:
+          project: rest.project
+          location: rest.location
+          channel: rest.channel
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{project}/locations/{location}/providers
+      name: listproviders
+      operations:
+      - method: GET
+        name: listproviders
+        description: Google Cloud Eventarc List providers
+        call: google-cloud-eventarc.listproviders
+        with:
+          project: rest.project
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: google-cloud-eventarc-mcp
+    transport: http
+    description: MCP adapter for Google Cloud Eventarc API for AI agent use.
+    tools:
+    - name: listtriggers
+      description: Google Cloud Eventarc List triggers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-eventarc.listtriggers
+      with:
+        project: tools.project
+        location: tools.location
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createtrigger
+      description: Google Cloud Eventarc Create a trigger
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-eventarc.createtrigger
+      with:
+        project: tools.project
+        location: tools.location
+        triggerId: tools.triggerId
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: triggerId
+        type: string
+        description: triggerId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gettrigger
+      description: Google Cloud Eventarc Get a trigger
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-eventarc.gettrigger
+      with:
+        project: tools.project
+        location: tools.location
+        trigger: tools.trigger
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: trigger
+        type: string
+        description: trigger
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatetrigger
+      description: Google Cloud Eventarc Update a trigger
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-eventarc.updatetrigger
+      with:
+        project: tools.project
+        location: tools.location
+        trigger: tools.trigger
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: trigger
+        type: string
+        description: trigger
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletetrigger
+      description: Google Cloud Eventarc Delete a trigger
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: google-cloud-eventarc.deletetrigger
+      with:
+        project: tools.project
+        location: tools.location
+        trigger: tools.trigger
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: trigger
+        type: string
+        description: trigger
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listchannels
+      description: Google Cloud Eventarc List channels
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-eventarc.listchannels
+      with:
+        project: tools.project
+        location: tools.location
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createchannel
+      description: Google Cloud Eventarc Create a channel
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-eventarc.createchannel
+      with:
+        project: tools.project
+        location: tools.location
+        channelId: tools.channelId
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: channelId
+        type: string
+        description: channelId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getchannel
+      description: Google Cloud Eventarc Get a channel
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-eventarc.getchannel
+      with:
+        project: tools.project
+        location: tools.location
+        channel: tools.channel
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: channel
+        type: string
+        description: channel
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletechannel
+      description: Google Cloud Eventarc Delete a channel
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: google-cloud-eventarc.deletechannel
+      with:
+        project: tools.project
+        location: tools.location
+        channel: tools.channel
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: channel
+        type: string
+        description: channel
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listproviders
+      description: Google Cloud Eventarc List providers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-eventarc.listproviders
+      with:
+        project: tools.project
+        location: tools.location
+      inputParameters:
+      - name: project
+        type: string
+        description: project
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
