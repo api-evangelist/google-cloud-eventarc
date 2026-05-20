@@ -11,61 +11,63 @@ modified: '2026-05-19'
 specificationVersion: '0.19'
 type: Index
 tags:
-- Event-Driven
-- Events
-- Google Cloud
-- Messaging
-- Serverless
-- Triggers
+  - Event-Driven
+  - Events
+  - Google Cloud
+  - Messaging
+  - Serverless
+  - Triggers
 apis:
-- name: Google Cloud Eventarc API
-  description: The Eventarc API enables you to create and manage event triggers, channels, and channel connections for routing
-    events between providers and subscribers. It supports CloudEvents-compliant event delivery to Cloud Run, Cloud Functions,
-    GKE, and Workflows targets.
-  humanURL: https://cloud.google.com/eventarc/docs
-  baseURL: https://eventarc.googleapis.com
-  properties:
-  - type: Documentation
-    url: https://cloud.google.com/eventarc/docs/reference/rest
-  - type: OpenAPI
-    url: openapi/openapi.yml
-  - type: Authentication
-    url: https://cloud.google.com/docs/authentication
+  - name: Google Cloud Eventarc API
+    description: The Eventarc API enables you to create and manage event triggers, channels, and channel connections for routing
+      events between providers and subscribers. It supports CloudEvents-compliant event delivery to Cloud Run, Cloud Functions,
+      GKE, and Workflows targets.
+    humanURL: https://cloud.google.com/eventarc/docs
+    baseURL: https://eventarc.googleapis.com
+    properties:
+    - type: Documentation
+      url: https://cloud.google.com/eventarc/docs/reference/rest
+    - type: OpenAPI
+      url: openapi/openapi.yml
+    - type: Authentication
+      url: https://cloud.google.com/docs/authentication
+    - type: GettingStarted
+      url: https://cloud.google.com/eventarc/docs/quickstarts
+    - type: JSONSchema
+      url: json-schema/json-schema.yml
+    - type: NaftikoCapability
+      url: capabilities/openapi-projects.yaml
+    tags:
+    - Event-Driven Architecture
+    - Events
+    - Triggers
+common:
+  - type: GitHubOrganization
+    url: https://github.com/GoogleCloudPlatform
+  - type: Portal
+    url: https://cloud.google.com/eventarc
   - type: GettingStarted
     url: https://cloud.google.com/eventarc/docs/quickstarts
-  - type: JSONSchema
-    url: json-schema/json-schema.yml
-  - type: NaftikoCapability
-    url: capabilities/openapi-projects.yaml
-  tags:
-  - Event-Driven Architecture
-  - Events
-  - Triggers
-common:
-- type: Portal
-  url: https://cloud.google.com/eventarc
-- type: GettingStarted
-  url: https://cloud.google.com/eventarc/docs/quickstarts
-- type: Documentation
-  url: https://cloud.google.com/eventarc/docs
-- type: Authentication
-  url: https://cloud.google.com/docs/authentication
-- type: Pricing
-  url: https://cloud.google.com/eventarc/pricing
-- type: TermsOfService
-  url: https://cloud.google.com/terms
-- type: PrivacyPolicy
-  url: https://policies.google.com/privacy
-- type: StatusPage
-  url: https://status.cloud.google.com/
-- type: Support
-  url: https://cloud.google.com/eventarc/docs/support
-- type: JSONLD
-  url: json-ld/json-ld.json
-- type: Integrations
-  url: https://cloud.google.com/marketplace
+  - type: Documentation
+    url: https://cloud.google.com/eventarc/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: Pricing
+    url: https://cloud.google.com/eventarc/pricing
+  - type: TermsOfService
+    url: https://cloud.google.com/terms
+  - type: PrivacyPolicy
+    url: https://policies.google.com/privacy
+  - type: StatusPage
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://cloud.google.com/eventarc/docs/support
+  - type: JSONLD
+    url: json-ld/json-ld.json
+  - type: Integrations
+    url: https://cloud.google.com/marketplace
 integrations:
-- name: Become a Partner
+  - name: Become a Partner
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
