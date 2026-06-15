@@ -1,0 +1,295 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Eventarc API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Eventarc List triggers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/triggers",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists triggers in a project and location."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Create a trigger",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/triggers",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "triggerId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new event trigger."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Get a trigger",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/triggers/:trigger",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "trigger",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets an event trigger."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Update a trigger",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/triggers/:trigger",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "trigger",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an event trigger."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Delete a trigger",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/triggers/:trigger",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "trigger",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes an event trigger."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc List channels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/channels",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists channels in a project and location."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Create a channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/channels",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new channel for event routing."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Get a channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/channels/:channel",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "channel",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets a channel."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc Delete a channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/channels/:channel",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "channel",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a channel."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Eventarc List providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://eventarc.googleapis.com/v1/projects/:project/locations/:location/providers",
+            "params": [
+              {
+                "name": "project",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists event providers in a project and location."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
