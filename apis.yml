@@ -42,6 +42,10 @@ apis:
       - Events
       - Triggers
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-eventarc-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-eventarc-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/GoogleCloudPlatform
   - type: Portal
