@@ -42,6 +42,8 @@ apis:
       - Events
       - Triggers
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-cloud-eventarc-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-cloud-eventarc-vulnerability-disclosure.yml
   - type: DomainSecurity
