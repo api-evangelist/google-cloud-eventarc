@@ -1,16 +1,15 @@
 openapi: 3.1.0
 info:
-  title: Google Cloud Eventarc API
-  description: >-
-    The Eventarc API enables event-driven architecture by allowing you to create
-    triggers that route events from providers to target destinations such as
-    Cloud Run, Cloud Functions, GKE, and Workflows.
+  title: Google Cloud Eventarc Projects API
+  description: The Eventarc API enables event-driven architecture by allowing you to create triggers that route events from providers to target destinations such as Cloud Run, Cloud Functions, GKE, and Workflows.
   version: v1
   contact:
     name: Google Cloud
     url: https://cloud.google.com/eventarc/docs
 servers:
-  - url: https://eventarc.googleapis.com
+- url: https://eventarc.googleapis.com
+tags:
+- name: Projects
 paths:
   /v1/projects/{project}/locations/{location}/triggers:
     get:
@@ -18,16 +17,16 @@ paths:
       summary: Google Cloud Eventarc List triggers
       description: Lists triggers in a project and location.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -36,26 +35,26 @@ paths:
               schema:
                 $ref: '#/components/schemas/ListTriggersResponse'
       tags:
-        - Projects
+      - Projects
     post:
       operationId: createTrigger
       summary: Google Cloud Eventarc Create a trigger
       description: Creates a new event trigger.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: triggerId
-          in: query
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: triggerId
+        in: query
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -70,28 +69,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/Operation'
       tags:
-        - Projects
+      - Projects
   /v1/projects/{project}/locations/{location}/triggers/{trigger}:
     get:
       operationId: getTrigger
       summary: Google Cloud Eventarc Get a trigger
       description: Gets an event trigger.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: trigger
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: trigger
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -100,27 +99,27 @@ paths:
               schema:
                 $ref: '#/components/schemas/Trigger'
       tags:
-        - Projects
+      - Projects
     patch:
       operationId: updateTrigger
       summary: Google Cloud Eventarc Update a trigger
       description: Updates an event trigger.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: trigger
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: trigger
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -135,27 +134,27 @@ paths:
               schema:
                 $ref: '#/components/schemas/Operation'
       tags:
-        - Projects
+      - Projects
     delete:
       operationId: deleteTrigger
       summary: Google Cloud Eventarc Delete a trigger
       description: Deletes an event trigger.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: trigger
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: trigger
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -164,23 +163,23 @@ paths:
               schema:
                 $ref: '#/components/schemas/Operation'
       tags:
-        - Projects
+      - Projects
   /v1/projects/{project}/locations/{location}/channels:
     get:
       operationId: listChannels
       summary: Google Cloud Eventarc List channels
       description: Lists channels in a project and location.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -189,26 +188,26 @@ paths:
               schema:
                 $ref: '#/components/schemas/ListChannelsResponse'
       tags:
-        - Projects
+      - Projects
     post:
       operationId: createChannel
       summary: Google Cloud Eventarc Create a channel
       description: Creates a new channel for event routing.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: channelId
-          in: query
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: channelId
+        in: query
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -223,28 +222,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/Operation'
       tags:
-        - Projects
+      - Projects
   /v1/projects/{project}/locations/{location}/channels/{channel}:
     get:
       operationId: getChannel
       summary: Google Cloud Eventarc Get a channel
       description: Gets a channel.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: channel
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: channel
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -253,27 +252,27 @@ paths:
               schema:
                 $ref: '#/components/schemas/Channel'
       tags:
-        - Projects
+      - Projects
     delete:
       operationId: deleteChannel
       summary: Google Cloud Eventarc Delete a channel
       description: Deletes a channel.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: channel
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: channel
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -282,23 +281,23 @@ paths:
               schema:
                 $ref: '#/components/schemas/Operation'
       tags:
-        - Projects
+      - Projects
   /v1/projects/{project}/locations/{location}/providers:
     get:
       operationId: listProviders
       summary: Google Cloud Eventarc List providers
       description: Lists event providers in a project and location.
       parameters:
-        - name: project
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: location
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -307,47 +306,47 @@ paths:
               schema:
                 $ref: '#/components/schemas/ListProvidersResponse'
       tags:
-        - Projects
+      - Projects
 components:
   schemas:
-    Trigger:
+    ListChannelsResponse:
+      type: object
+      properties:
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/Channel'
+        nextPageToken:
+          type: string
+    ListTriggersResponse:
+      type: object
+      properties:
+        triggers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Trigger'
+        nextPageToken:
+          type: string
+    Channel:
       type: object
       properties:
         name:
           type: string
-          description: >-
-            The trigger name in the format
-            projects/{project}/locations/{location}/triggers/{trigger}.
-        eventFilters:
-          type: array
-          items:
-            $ref: '#/components/schemas/EventFilter'
-        serviceAccount:
+        provider:
           type: string
-        destination:
-          $ref: '#/components/schemas/Destination'
-        transport:
-          $ref: '#/components/schemas/Transport'
-        channel:
+        state:
           type: string
+          enum:
+          - STATE_UNSPECIFIED
+          - PENDING
+          - ACTIVE
+          - INACTIVE
         createTime:
           type: string
           format: date-time
         updateTime:
           type: string
           format: date-time
-    EventFilter:
-      type: object
-      properties:
-        attribute:
-          type: string
-          description: The name of the event filter attribute.
-        value:
-          type: string
-          description: The value of the event filter attribute.
-        operator:
-          type: string
-          description: The operator used for matching the event filter.
     Destination:
       type: object
       properties:
@@ -359,15 +358,44 @@ components:
           $ref: '#/components/schemas/GKE'
         workflow:
           type: string
-    CloudRun:
+    Provider:
       type: object
       properties:
-        service:
+        name:
           type: string
-        path:
+        displayName:
           type: string
-        region:
+        eventTypes:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              description:
+                type: string
+    ListProvidersResponse:
+      type: object
+      properties:
+        providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Provider'
+        nextPageToken:
           type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
     GKE:
       type: object
       properties:
@@ -391,81 +419,48 @@ components:
               type: string
             subscription:
               type: string
-    Channel:
+    Trigger:
       type: object
       properties:
         name:
           type: string
-        provider:
+          description: The trigger name in the format projects/{project}/locations/{location}/triggers/{trigger}.
+        eventFilters:
+          type: array
+          items:
+            $ref: '#/components/schemas/EventFilter'
+        serviceAccount:
           type: string
-        state:
+        destination:
+          $ref: '#/components/schemas/Destination'
+        transport:
+          $ref: '#/components/schemas/Transport'
+        channel:
           type: string
-          enum:
-            - STATE_UNSPECIFIED
-            - PENDING
-            - ACTIVE
-            - INACTIVE
         createTime:
           type: string
           format: date-time
         updateTime:
           type: string
           format: date-time
-    Provider:
+    CloudRun:
       type: object
       properties:
-        name:
+        service:
           type: string
-        displayName:
+        path:
           type: string
-        eventTypes:
-          type: array
-          items:
-            type: object
-            properties:
-              type:
-                type: string
-              description:
-                type: string
-    Operation:
+        region:
+          type: string
+    EventFilter:
       type: object
       properties:
-        name:
+        attribute:
           type: string
-        done:
-          type: boolean
-        metadata:
-          type: object
-        response:
-          type: object
-        error:
-          type: object
-    ListTriggersResponse:
-      type: object
-      properties:
-        triggers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Trigger'
-        nextPageToken:
+          description: The name of the event filter attribute.
+        value:
           type: string
-    ListChannelsResponse:
-      type: object
-      properties:
-        channels:
-          type: array
-          items:
-            $ref: '#/components/schemas/Channel'
-        nextPageToken:
+          description: The value of the event filter attribute.
+        operator:
           type: string
-    ListProvidersResponse:
-      type: object
-      properties:
-        providers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Provider'
-        nextPageToken:
-          type: string
-tags:
-  - name: Projects
+          description: The operator used for matching the event filter.
