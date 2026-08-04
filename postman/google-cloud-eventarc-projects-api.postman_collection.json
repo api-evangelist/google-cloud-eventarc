@@ -1,0 +1,1273 @@
+{
+  "info": {
+    "_postman_id": "92fa1183-055b-490f-a1ad-1178b86a96e3",
+    "name": "Google Cloud Eventarc Projects API",
+    "description": "The Eventarc API enables event-driven architecture by allowing you to create triggers that route events from providers to target destinations such as Cloud Run, Cloud Functions, GKE, and Workflows.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:32.000Z",
+    "updatedAt": "2026-07-28T01:47:32.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-92fa1183-055b-490f-a1ad-1178b86a96e3"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "item": [
+        {
+          "name": "projects",
+          "item": [
+            {
+              "name": "{project}",
+              "item": [
+                {
+                  "name": "locations",
+                  "item": [
+                    {
+                      "name": "{location}",
+                      "item": [
+                        {
+                          "name": "triggers",
+                          "item": [
+                            {
+                              "name": "{trigger}",
+                              "item": [
+                                {
+                                  "name": "Google Cloud Eventarc Get a trigger",
+                                  "id": "e367fb79-d31a-48a8-ba81-e2bf9984935e",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers/:trigger",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "triggers",
+                                        ":trigger"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "89d93ebe-057e-49d8-a2ee-d55122f670a6",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "fd89637b-bbde-40fe-b7b2-295fd47ab164",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "b9ecab15-f594-4447-974a-403c4317e047",
+                                          "key": "trigger",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Gets an event trigger."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "c2c9cc68-2de9-4c94-a043-7fa93518028c",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers/:trigger",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "triggers",
+                                            ":trigger"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "trigger"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"eventFilters\": [\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    },\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    }\n  ],\n  \"serviceAccount\": \"<string>\",\n  \"destination\": {\n    \"cloudRun\": {\n      \"service\": \"<string>\",\n      \"path\": \"<string>\",\n      \"region\": \"<string>\"\n    },\n    \"cloudFunction\": \"<string>\",\n    \"gke\": {\n      \"cluster\": \"<string>\",\n      \"location\": \"<string>\",\n      \"namespace\": \"<string>\",\n      \"service\": \"<string>\",\n      \"path\": \"<string>\"\n    },\n    \"workflow\": \"<string>\"\n  },\n  \"transport\": {\n    \"pubsub\": {\n      \"topic\": \"<string>\",\n      \"subscription\": \"<string>\"\n    }\n  },\n  \"channel\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                      "createdAt": "2026-07-28T01:47:32.000Z",
+                                      "updatedAt": "2026-07-28T01:47:32.000Z",
+                                      "uid": "35240-c2c9cc68-2de9-4c94-a043-7fa93518028c"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-e367fb79-d31a-48a8-ba81-e2bf9984935e"
+                                },
+                                {
+                                  "name": "Google Cloud Eventarc Update a trigger",
+                                  "id": "762cbb0c-e91c-45fe-8d82-ea397a449a4d",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "PATCH",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"eventFilters\": [\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    },\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    }\n  ],\n  \"serviceAccount\": \"<string>\",\n  \"destination\": {\n    \"cloudRun\": {\n      \"service\": \"<string>\",\n      \"path\": \"<string>\",\n      \"region\": \"<string>\"\n    },\n    \"cloudFunction\": \"<string>\",\n    \"gke\": {\n      \"cluster\": \"<string>\",\n      \"location\": \"<string>\",\n      \"namespace\": \"<string>\",\n      \"service\": \"<string>\",\n      \"path\": \"<string>\"\n    },\n    \"workflow\": \"<string>\"\n  },\n  \"transport\": {\n    \"pubsub\": {\n      \"topic\": \"<string>\",\n      \"subscription\": \"<string>\"\n    }\n  },\n  \"channel\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers/:trigger",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "triggers",
+                                        ":trigger"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "fe62bf0d-e68c-4868-b47b-d64e424dd8b4",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "461b3afb-392e-4d8c-935d-e168772953c4",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "efcd6691-9cd2-4f4a-bdc6-78c3307c2066",
+                                          "key": "trigger",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Updates an event trigger."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "aca1dc5b-44bf-49b8-b16d-7fad7656612a",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "PATCH",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"name\": \"<string>\",\n  \"eventFilters\": [\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    },\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    }\n  ],\n  \"serviceAccount\": \"<string>\",\n  \"destination\": {\n    \"cloudRun\": {\n      \"service\": \"<string>\",\n      \"path\": \"<string>\",\n      \"region\": \"<string>\"\n    },\n    \"cloudFunction\": \"<string>\",\n    \"gke\": {\n      \"cluster\": \"<string>\",\n      \"location\": \"<string>\",\n      \"namespace\": \"<string>\",\n      \"service\": \"<string>\",\n      \"path\": \"<string>\"\n    },\n    \"workflow\": \"<string>\"\n  },\n  \"transport\": {\n    \"pubsub\": {\n      \"topic\": \"<string>\",\n      \"subscription\": \"<string>\"\n    }\n  },\n  \"channel\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers/:trigger",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "triggers",
+                                            ":trigger"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "trigger"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                      "createdAt": "2026-07-28T01:47:32.000Z",
+                                      "updatedAt": "2026-07-28T01:47:32.000Z",
+                                      "uid": "35240-aca1dc5b-44bf-49b8-b16d-7fad7656612a"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-762cbb0c-e91c-45fe-8d82-ea397a449a4d"
+                                },
+                                {
+                                  "name": "Google Cloud Eventarc Delete a trigger",
+                                  "id": "c7257121-9b74-473e-a4c0-db3ad2704ff3",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers/:trigger",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "triggers",
+                                        ":trigger"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "5d94c3c9-bf3d-4131-a238-6b47126a2548",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "b5130117-7312-4579-8aba-ce6c0462cb28",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "4213507b-18e1-4160-8636-86581d7b6a4c",
+                                          "key": "trigger",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Deletes an event trigger."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "5a9e8d48-d6d2-4a3f-9a2e-7ae8f7c116b3",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers/:trigger",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "triggers",
+                                            ":trigger"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "trigger"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                      "createdAt": "2026-07-28T01:47:32.000Z",
+                                      "updatedAt": "2026-07-28T01:47:32.000Z",
+                                      "uid": "35240-5a9e8d48-d6d2-4a3f-9a2e-7ae8f7c116b3"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-c7257121-9b74-473e-a4c0-db3ad2704ff3"
+                                }
+                              ],
+                              "id": "ca97484d-f387-4d4c-8275-3e39df638796",
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-ca97484d-f387-4d4c-8275-3e39df638796"
+                            },
+                            {
+                              "name": "Google Cloud Eventarc List triggers",
+                              "id": "dead28e9-982c-48e4-a82d-7eeb41f060e4",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "triggers"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "56869fff-c2cd-4b28-b3c5-12ceacda8f60",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "31a2d3a5-d84b-4a4f-8e8f-46c5e2f3d5c3",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Lists triggers in a project and location."
+                              },
+                              "response": [
+                                {
+                                  "id": "91fcad6d-c0ee-40c4-a855-9bafae590297",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "triggers"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"triggers\": [\n    {\n      \"name\": \"<string>\",\n      \"eventFilters\": [\n        {\n          \"attribute\": \"<string>\",\n          \"value\": \"<string>\",\n          \"operator\": \"<string>\"\n        },\n        {\n          \"attribute\": \"<string>\",\n          \"value\": \"<string>\",\n          \"operator\": \"<string>\"\n        }\n      ],\n      \"serviceAccount\": \"<string>\",\n      \"destination\": {\n        \"cloudRun\": {\n          \"service\": \"<string>\",\n          \"path\": \"<string>\",\n          \"region\": \"<string>\"\n        },\n        \"cloudFunction\": \"<string>\",\n        \"gke\": {\n          \"cluster\": \"<string>\",\n          \"location\": \"<string>\",\n          \"namespace\": \"<string>\",\n          \"service\": \"<string>\",\n          \"path\": \"<string>\"\n        },\n        \"workflow\": \"<string>\"\n      },\n      \"transport\": {\n        \"pubsub\": {\n          \"topic\": \"<string>\",\n          \"subscription\": \"<string>\"\n        }\n      },\n      \"channel\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"eventFilters\": [\n        {\n          \"attribute\": \"<string>\",\n          \"value\": \"<string>\",\n          \"operator\": \"<string>\"\n        },\n        {\n          \"attribute\": \"<string>\",\n          \"value\": \"<string>\",\n          \"operator\": \"<string>\"\n        }\n      ],\n      \"serviceAccount\": \"<string>\",\n      \"destination\": {\n        \"cloudRun\": {\n          \"service\": \"<string>\",\n          \"path\": \"<string>\",\n          \"region\": \"<string>\"\n        },\n        \"cloudFunction\": \"<string>\",\n        \"gke\": {\n          \"cluster\": \"<string>\",\n          \"location\": \"<string>\",\n          \"namespace\": \"<string>\",\n          \"service\": \"<string>\",\n          \"path\": \"<string>\"\n        },\n        \"workflow\": \"<string>\"\n      },\n      \"transport\": {\n        \"pubsub\": {\n          \"topic\": \"<string>\",\n          \"subscription\": \"<string>\"\n        }\n      },\n      \"channel\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-91fcad6d-c0ee-40c4-a855-9bafae590297"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-dead28e9-982c-48e4-a82d-7eeb41f060e4"
+                            },
+                            {
+                              "name": "Google Cloud Eventarc Create a trigger",
+                              "id": "f2fca4ba-ca96-4198-b2dd-1eafb082894b",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"eventFilters\": [\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    },\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    }\n  ],\n  \"serviceAccount\": \"<string>\",\n  \"destination\": {\n    \"cloudRun\": {\n      \"service\": \"<string>\",\n      \"path\": \"<string>\",\n      \"region\": \"<string>\"\n    },\n    \"cloudFunction\": \"<string>\",\n    \"gke\": {\n      \"cluster\": \"<string>\",\n      \"location\": \"<string>\",\n      \"namespace\": \"<string>\",\n      \"service\": \"<string>\",\n      \"path\": \"<string>\"\n    },\n    \"workflow\": \"<string>\"\n  },\n  \"transport\": {\n    \"pubsub\": {\n      \"topic\": \"<string>\",\n      \"subscription\": \"<string>\"\n    }\n  },\n  \"channel\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers?triggerId=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "triggers"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "triggerId",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "4f18268d-5341-437a-98fb-d2333d67e523",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "7a5c6e93-4055-4657-96bd-384c9d89848c",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Creates a new event trigger."
+                              },
+                              "response": [
+                                {
+                                  "id": "a0ba89df-37e5-47f0-9776-781aeac6e81c",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"eventFilters\": [\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    },\n    {\n      \"attribute\": \"<string>\",\n      \"value\": \"<string>\",\n      \"operator\": \"<string>\"\n    }\n  ],\n  \"serviceAccount\": \"<string>\",\n  \"destination\": {\n    \"cloudRun\": {\n      \"service\": \"<string>\",\n      \"path\": \"<string>\",\n      \"region\": \"<string>\"\n    },\n    \"cloudFunction\": \"<string>\",\n    \"gke\": {\n      \"cluster\": \"<string>\",\n      \"location\": \"<string>\",\n      \"namespace\": \"<string>\",\n      \"service\": \"<string>\",\n      \"path\": \"<string>\"\n    },\n    \"workflow\": \"<string>\"\n  },\n  \"transport\": {\n    \"pubsub\": {\n      \"topic\": \"<string>\",\n      \"subscription\": \"<string>\"\n    }\n  },\n  \"channel\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/triggers?triggerId=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "triggers"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "triggerId",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-a0ba89df-37e5-47f0-9776-781aeac6e81c"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-f2fca4ba-ca96-4198-b2dd-1eafb082894b"
+                            }
+                          ],
+                          "id": "a0daf4b7-aaeb-47ba-80a3-f8663e3c6fd1",
+                          "createdAt": "2026-07-28T01:47:32.000Z",
+                          "updatedAt": "2026-07-28T01:47:32.000Z",
+                          "uid": "35240-a0daf4b7-aaeb-47ba-80a3-f8663e3c6fd1"
+                        },
+                        {
+                          "name": "channels",
+                          "item": [
+                            {
+                              "name": "{channel}",
+                              "item": [
+                                {
+                                  "name": "Google Cloud Eventarc Get a channel",
+                                  "id": "52885175-40c7-4b28-a46f-4cd185c0535f",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels/:channel",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "channels",
+                                        ":channel"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "880ee8c3-e35b-493c-a7dc-078e73a128d6",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "06f2bac9-0f4a-4493-941a-a28b6174719e",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "70fa1192-cffb-4985-9ae8-97202b423cab",
+                                          "key": "channel",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Gets a channel."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "2c43c477-1e1c-4549-8b64-f17f00f53ba5",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels/:channel",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "channels",
+                                            ":channel"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "channel"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"provider\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                      "createdAt": "2026-07-28T01:47:32.000Z",
+                                      "updatedAt": "2026-07-28T01:47:32.000Z",
+                                      "uid": "35240-2c43c477-1e1c-4549-8b64-f17f00f53ba5"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-52885175-40c7-4b28-a46f-4cd185c0535f"
+                                },
+                                {
+                                  "name": "Google Cloud Eventarc Delete a channel",
+                                  "id": "53ce5522-1220-4558-a3b6-e902ab0cf3d5",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels/:channel",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "channels",
+                                        ":channel"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "0fbe08a2-b015-47eb-9684-1206d18c9273",
+                                          "key": "project",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "dbb1ec0b-f191-423f-93f4-4e4204fda7e3",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "49352a04-2ebb-48c0-b0c2-4f399264d4fe",
+                                          "key": "channel",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Deletes a channel."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "7a1fc89f-6adc-4504-90a4-4109fecd8126",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels/:channel",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "v1",
+                                            "projects",
+                                            ":project",
+                                            "locations",
+                                            ":location",
+                                            "channels",
+                                            ":channel"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "project"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "channel"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                      "createdAt": "2026-07-28T01:47:32.000Z",
+                                      "updatedAt": "2026-07-28T01:47:32.000Z",
+                                      "uid": "35240-7a1fc89f-6adc-4504-90a4-4109fecd8126"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-53ce5522-1220-4558-a3b6-e902ab0cf3d5"
+                                }
+                              ],
+                              "id": "0ba12078-b0cc-4785-947d-1f570726b246",
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-0ba12078-b0cc-4785-947d-1f570726b246"
+                            },
+                            {
+                              "name": "Google Cloud Eventarc List channels",
+                              "id": "9f9e6d8c-2681-4fda-946e-d4881174df38",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "channels"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "ed6fcdc9-9eea-4957-8203-3a2755c572f2",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "3645486a-5a52-4d48-89cb-f184181762b2",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Lists channels in a project and location."
+                              },
+                              "response": [
+                                {
+                                  "id": "86bd0476-f982-45d2-9583-f62fd5601bba",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "channels"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"channels\": [\n    {\n      \"name\": \"<string>\",\n      \"provider\": \"<string>\",\n      \"state\": \"ACTIVE\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"provider\": \"<string>\",\n      \"state\": \"INACTIVE\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-86bd0476-f982-45d2-9583-f62fd5601bba"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-9f9e6d8c-2681-4fda-946e-d4881174df38"
+                            },
+                            {
+                              "name": "Google Cloud Eventarc Create a channel",
+                              "id": "cdfacc34-7b75-4cf2-b0f9-f80ccdb97c62",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"provider\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels?channelId=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "channels"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "channelId",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "756558f9-3870-48fb-8bea-b435799d8944",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "ed1b623d-1781-47e7-a9d4-bd823e0b8c3c",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Creates a new channel for event routing."
+                              },
+                              "response": [
+                                {
+                                  "id": "44020d37-cb74-4371-863e-f7cf282e688b",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"provider\": \"<string>\",\n  \"state\": \"ACTIVE\",\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/channels?channelId=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "channels"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "channelId",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"response\": {},\n  \"error\": {}\n}",
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-44020d37-cb74-4371-863e-f7cf282e688b"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-cdfacc34-7b75-4cf2-b0f9-f80ccdb97c62"
+                            }
+                          ],
+                          "id": "f50d6950-ad6f-4725-bced-246cf415e539",
+                          "createdAt": "2026-07-28T01:47:32.000Z",
+                          "updatedAt": "2026-07-28T01:47:32.000Z",
+                          "uid": "35240-f50d6950-ad6f-4725-bced-246cf415e539"
+                        },
+                        {
+                          "name": "providers",
+                          "item": [
+                            {
+                              "name": "Google Cloud Eventarc List providers",
+                              "id": "eabfe78e-7c36-4901-8cd9-94c63dc274b1",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/providers",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "v1",
+                                    "projects",
+                                    ":project",
+                                    "locations",
+                                    ":location",
+                                    "providers"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "6c22bb5a-e9b1-4ccd-8391-100128eb1524",
+                                      "key": "project",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "e7e56425-742d-440f-af45-fb2f5ac2c664",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Lists event providers in a project and location."
+                              },
+                              "response": [
+                                {
+                                  "id": "3a8c179c-5500-4808-89f9-79b418e4aa86",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/v1/projects/:project/locations/:location/providers",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "v1",
+                                        "projects",
+                                        ":project",
+                                        "locations",
+                                        ":location",
+                                        "providers"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "project"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"providers\": [\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"eventTypes\": [\n        {\n          \"type\": \"<string>\",\n          \"description\": \"<string>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"description\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"eventTypes\": [\n        {\n          \"type\": \"<string>\",\n          \"description\": \"<string>\"\n        },\n        {\n          \"type\": \"<string>\",\n          \"description\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-07-28T01:47:32.000Z",
+                                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                                  "uid": "35240-3a8c179c-5500-4808-89f9-79b418e4aa86"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:32.000Z",
+                              "updatedAt": "2026-07-28T01:47:32.000Z",
+                              "uid": "35240-eabfe78e-7c36-4901-8cd9-94c63dc274b1"
+                            }
+                          ],
+                          "id": "b89319d1-61c9-4aaa-995f-6cf88cd13b92",
+                          "createdAt": "2026-07-28T01:47:32.000Z",
+                          "updatedAt": "2026-07-28T01:47:32.000Z",
+                          "uid": "35240-b89319d1-61c9-4aaa-995f-6cf88cd13b92"
+                        }
+                      ],
+                      "id": "15984411-5603-4c88-b990-9db5907bc4cf",
+                      "createdAt": "2026-07-28T01:47:32.000Z",
+                      "updatedAt": "2026-07-28T01:47:32.000Z",
+                      "uid": "35240-15984411-5603-4c88-b990-9db5907bc4cf"
+                    }
+                  ],
+                  "id": "28b336b6-18da-491f-bebf-951850bf6bd4",
+                  "createdAt": "2026-07-28T01:47:32.000Z",
+                  "updatedAt": "2026-07-28T01:47:32.000Z",
+                  "uid": "35240-28b336b6-18da-491f-bebf-951850bf6bd4"
+                }
+              ],
+              "id": "cc830456-223d-489f-bdcb-9fde05b1d3ba",
+              "createdAt": "2026-07-28T01:47:32.000Z",
+              "updatedAt": "2026-07-28T01:47:32.000Z",
+              "uid": "35240-cc830456-223d-489f-bdcb-9fde05b1d3ba"
+            }
+          ],
+          "id": "612fc6d2-6d53-48d5-9303-44b535ea0dab",
+          "createdAt": "2026-07-28T01:47:32.000Z",
+          "updatedAt": "2026-07-28T01:47:32.000Z",
+          "uid": "35240-612fc6d2-6d53-48d5-9303-44b535ea0dab"
+        }
+      ],
+      "id": "a1205d19-a049-40fc-8fec-ecba37bb4480",
+      "createdAt": "2026-07-28T01:47:32.000Z",
+      "updatedAt": "2026-07-28T01:47:32.000Z",
+      "uid": "35240-a1205d19-a049-40fc-8fec-ecba37bb4480"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://eventarc.googleapis.com"
+    }
+  ]
+}

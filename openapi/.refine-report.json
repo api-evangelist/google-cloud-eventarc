@@ -1,0 +1,14 @@
+{
+  "provider": "google-cloud-eventarc",
+  "sources": [
+    "google-cloud-eventarc-projects-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-eventarc-projects-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
