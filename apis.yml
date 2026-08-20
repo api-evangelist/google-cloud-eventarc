@@ -25,6 +25,13 @@ specificationVersion: '0.23'
 type: Index
 tags:
   - Event-Driven
+  - Event
+  - Google Cloud
+  - Messaging
+  - Serverless
+  - Triggers
+tags_raw:
+  - Event-Driven
   - Events
   - Google Cloud
   - Messaging
@@ -37,6 +44,8 @@ apis:
   humanURL: https://cloud.google.com/eventarc/docs
   baseURL: https://eventarc.googleapis.com
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
