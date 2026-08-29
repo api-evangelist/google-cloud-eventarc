@@ -5,6 +5,18 @@ description: >-
   routing events from Google Cloud services, SaaS applications, and custom sources to target destinations. Eventarc
   supports both standard and advanced editions, providing scalable, serverless event routing with built-in security,
   authorization, observability, and error handling.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
