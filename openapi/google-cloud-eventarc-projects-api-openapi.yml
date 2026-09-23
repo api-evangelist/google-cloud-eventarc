@@ -318,6 +318,83 @@ components:
             $ref: '#/components/schemas/Channel'
         nextPageToken:
           type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        response:
+          type: object
+        error:
+          type: object
+    CloudRun:
+      type: object
+      properties:
+        service:
+          type: string
+        path:
+          type: string
+        region:
+          type: string
+    ListTriggersResponse:
+      type: object
+      properties:
+        triggers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Trigger'
+        nextPageToken:
+          type: string
+    Transport:
+      type: object
+      properties:
+        pubsub:
+          type: object
+          properties:
+            topic:
+              type: string
+            subscription:
+              type: string
+    Provider:
+      type: object
+      properties:
+        name:
+          type: string
+        displayName:
+          type: string
+        eventTypes:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              description:
+                type: string
+    Destination:
+      type: object
+      properties:
+        cloudRun:
+          $ref: '#/components/schemas/CloudRun'
+        cloudFunction:
+          type: string
+        gke:
+          $ref: '#/components/schemas/GKE'
+        workflow:
+          type: string
+    ListProvidersResponse:
+      type: object
+      properties:
+        providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Provider'
+        nextPageToken:
+          type: string
     Trigger:
       type: object
       properties:
@@ -342,47 +419,6 @@ components:
         updateTime:
           type: string
           format: date-time
-    ListProvidersResponse:
-      type: object
-      properties:
-        providers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Provider'
-        nextPageToken:
-          type: string
-    GKE:
-      type: object
-      properties:
-        cluster:
-          type: string
-        location:
-          type: string
-        namespace:
-          type: string
-        service:
-          type: string
-        path:
-          type: string
-    Transport:
-      type: object
-      properties:
-        pubsub:
-          type: object
-          properties:
-            topic:
-              type: string
-            subscription:
-              type: string
-    ListTriggersResponse:
-      type: object
-      properties:
-        triggers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Trigger'
-        nextPageToken:
-          type: string
     EventFilter:
       type: object
       properties:
@@ -395,39 +431,6 @@ components:
         operator:
           type: string
           description: The operator used for matching the event filter.
-    Destination:
-      type: object
-      properties:
-        cloudRun:
-          $ref: '#/components/schemas/CloudRun'
-        cloudFunction:
-          type: string
-        gke:
-          $ref: '#/components/schemas/GKE'
-        workflow:
-          type: string
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        metadata:
-          type: object
-        response:
-          type: object
-        error:
-          type: object
-    CloudRun:
-      type: object
-      properties:
-        service:
-          type: string
-        path:
-          type: string
-        region:
-          type: string
     Channel:
       type: object
       properties:
@@ -448,19 +451,16 @@ components:
         updateTime:
           type: string
           format: date-time
-    Provider:
+    GKE:
       type: object
       properties:
-        name:
+        cluster:
           type: string
-        displayName:
+        location:
           type: string
-        eventTypes:
-          type: array
-          items:
-            type: object
-            properties:
-              type:
-                type: string
-              description:
-                type: string
+        namespace:
+          type: string
+        service:
+          type: string
+        path:
+          type: string
