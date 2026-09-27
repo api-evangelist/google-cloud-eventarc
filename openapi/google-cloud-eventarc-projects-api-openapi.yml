@@ -309,6 +309,35 @@ paths:
       - Projects
 components:
   schemas:
+    Destination:
+      type: object
+      properties:
+        cloudRun:
+          $ref: '#/components/schemas/CloudRun'
+        cloudFunction:
+          type: string
+        gke:
+          $ref: '#/components/schemas/GKE'
+        workflow:
+          type: string
+    CloudRun:
+      type: object
+      properties:
+        service:
+          type: string
+        path:
+          type: string
+        region:
+          type: string
+    ListProvidersResponse:
+      type: object
+      properties:
+        providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Provider'
+        nextPageToken:
+          type: string
     ListChannelsResponse:
       type: object
       properties:
@@ -317,6 +346,70 @@ components:
           items:
             $ref: '#/components/schemas/Channel'
         nextPageToken:
+          type: string
+    Channel:
+      type: object
+      properties:
+        name:
+          type: string
+        provider:
+          type: string
+        state:
+          type: string
+          enum:
+          - STATE_UNSPECIFIED
+          - PENDING
+          - ACTIVE
+          - INACTIVE
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+    Transport:
+      type: object
+      properties:
+        pubsub:
+          type: object
+          properties:
+            topic:
+              type: string
+            subscription:
+              type: string
+    EventFilter:
+      type: object
+      properties:
+        attribute:
+          type: string
+          description: The name of the event filter attribute.
+        value:
+          type: string
+          description: The value of the event filter attribute.
+        operator:
+          type: string
+          description: The operator used for matching the event filter.
+    ListTriggersResponse:
+      type: object
+      properties:
+        triggers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Trigger'
+        nextPageToken:
+          type: string
+    GKE:
+      type: object
+      properties:
+        cluster:
+          type: string
+        location:
+          type: string
+        namespace:
+          type: string
+        service:
+          type: string
+        path:
           type: string
     Operation:
       type: object
@@ -331,34 +424,6 @@ components:
           type: object
         error:
           type: object
-    CloudRun:
-      type: object
-      properties:
-        service:
-          type: string
-        path:
-          type: string
-        region:
-          type: string
-    ListTriggersResponse:
-      type: object
-      properties:
-        triggers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Trigger'
-        nextPageToken:
-          type: string
-    Transport:
-      type: object
-      properties:
-        pubsub:
-          type: object
-          properties:
-            topic:
-              type: string
-            subscription:
-              type: string
     Provider:
       type: object
       properties:
@@ -375,26 +440,6 @@ components:
                 type: string
               description:
                 type: string
-    Destination:
-      type: object
-      properties:
-        cloudRun:
-          $ref: '#/components/schemas/CloudRun'
-        cloudFunction:
-          type: string
-        gke:
-          $ref: '#/components/schemas/GKE'
-        workflow:
-          type: string
-    ListProvidersResponse:
-      type: object
-      properties:
-        providers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Provider'
-        nextPageToken:
-          type: string
     Trigger:
       type: object
       properties:
@@ -419,48 +464,3 @@ components:
         updateTime:
           type: string
           format: date-time
-    EventFilter:
-      type: object
-      properties:
-        attribute:
-          type: string
-          description: The name of the event filter attribute.
-        value:
-          type: string
-          description: The value of the event filter attribute.
-        operator:
-          type: string
-          description: The operator used for matching the event filter.
-    Channel:
-      type: object
-      properties:
-        name:
-          type: string
-        provider:
-          type: string
-        state:
-          type: string
-          enum:
-          - STATE_UNSPECIFIED
-          - PENDING
-          - ACTIVE
-          - INACTIVE
-        createTime:
-          type: string
-          format: date-time
-        updateTime:
-          type: string
-          format: date-time
-    GKE:
-      type: object
-      properties:
-        cluster:
-          type: string
-        location:
-          type: string
-        namespace:
-          type: string
-        service:
-          type: string
-        path:
-          type: string
