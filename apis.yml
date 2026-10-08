@@ -71,6 +71,12 @@ apis:
   - type: JSONSchema
     url: json-schema/json-schema.yml
 common:
+  - type: Plans
+    url: plans/google-cloud-eventarc-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/google-cloud-eventarc-rate-limits.yml
+  - type: FinOps
+    url: finops/google-cloud-eventarc-finops.yml
   - type: Website
     url: https://www.google.com/
   - type: PostmanWorkspace
