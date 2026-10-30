@@ -1,4 +1,4 @@
-# Google Cloud Eventarc (google-cloud-eventarc)
+# Google Cloud Eventarc
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,67 +66,130 @@
 
 Google Cloud Eventarc is a fully managed eventing service that allows you to build event-driven architectures by routing events from Google Cloud services, SaaS applications, and custom sources to target destinations. Eventarc supports both standard and advanced editions, providing scalable, serverless event routing with built-in security, authorization, observability, and error handling.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-eventarc/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-eventarc/refs/heads/main/apis.yml)
+**Areas:** Event-Driven · Event · Google Cloud · Messaging · Serverless · Triggers
 
-## Scope
+## Google Cloud Eventarc on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud Eventarc is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-eventarc/](https://apis.io/providers/google-cloud-eventarc/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Event-Driven
-- Events
-- Google Cloud
-- Messaging
-- Serverless
-- Triggers
+- [Google Cloud Eventarc Projects API](https://apis.io/apis/google-cloud-eventarc/google-cloud-eventarc-projects-api/) — The Projects API from Google Cloud Eventarc — 5 operation(s) for projects.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Cloud Eventarc API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Eventarc API enables you to create and manage event triggers, channels, and channel connections for routing events between providers and subscribers. It supports CloudEvents-compliant event delivery to Cloud Run, Cloud Functions, GKE, and Workflows targets.
+- [Google Cloud Eventarc Agentic Access](https://apis.io/agentic-access/google-cloud-eventarc/google-cloud-eventarc-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/eventarc/docs](https://cloud.google.com/eventarc/docs)
-- **Base URL:** `https://eventarc.googleapis.com`
+#### Collections (3)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Event-Driven Architecture
-- Events
-- Triggers
+- [Google Cloud Eventarc Projects API](https://apis.io/collections/google-cloud-eventarc/open-google-cloud-eventarc-projects-api/)
+- [Google Cloud Eventarc API](https://apis.io/collections/google-cloud-eventarc/open-openapi/)
+- [Google Cloud Eventarc Projects API](https://apis.io/collections/google-cloud-eventarc/postman-google-cloud-eventarc-projects-api/)
 
-#### Properties
+#### Governance rules (1)
 
-- [Documentation](https://cloud.google.com/eventarc/docs/reference/rest)
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://cloud.google.com/docs/authentication)
-- [Getting Started](https://cloud.google.com/eventarc/docs/quickstarts)
-- [JSON Schema](json-schema/json-schema.yml) — [JSON Schema](https://json-schema.org/specification)
+Spectral rulesets for the provider's contracts.
 
-## Common Properties
+- [Google Cloud Eventarc — jsonschema rules](https://apis.io/rules/google-cloud-eventarc/google-cloud-eventarc-jsonschema-spectral-rules/)
 
-- [GitHub Organization](https://github.com/GoogleCloudPlatform)
-- [Portal](https://cloud.google.com/eventarc)
-- [Getting Started](https://cloud.google.com/eventarc/docs/quickstarts)
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Cloud Eventarc Domain Security](https://apis.io/security/google-cloud-eventarc/google-cloud-eventarc-domain-security/)
+- [Google Cloud Eventarc Vulnerability Disclosure](https://apis.io/security/google-cloud-eventarc/google-cloud-eventarc-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Cloud Eventarc Plans Pricing](https://apis.io/plans/google-cloud-eventarc/google-cloud-eventarc-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Cloud Eventarc Rate Limits](https://apis.io/rate-limits/google-cloud-eventarc/google-cloud-eventarc-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Cloud Eventarc Finops](https://apis.io/finops/google-cloud-eventarc/google-cloud-eventarc-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://cloud.google.com/eventarc/docs)
-- [Authentication](https://cloud.google.com/docs/authentication)
+- [Getting started](https://cloud.google.com/eventarc/docs/quickstarts)
 - [Pricing](https://cloud.google.com/eventarc/pricing)
-- [Terms of Service](https://cloud.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://cloud.google.com/eventarc/docs/support)
-- [JSON-LD](json-ld/json-ld.json) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Integrations](https://cloud.google.com/marketplace)
+- [Terms of service](https://cloud.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/GoogleCloudPlatform)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 43.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 50.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 48.8 |
+| Access clarity | 39.5 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-eventarc/](https://apis.io/providers/google-cloud-eventarc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud Eventarc: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-eventarc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
